@@ -7,9 +7,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar p-3 bg-secondary mb-5">
+    <%= link_to "RailsWikinimous", articles_path, class: "text-white" %>
+    <%= link_to "New article", new_article_path, class: "text-white" %>
+    </div>
+    <div class="container w-50 text-left">
+      <%= yield %>
+    </div>
   </body>
 </html>
